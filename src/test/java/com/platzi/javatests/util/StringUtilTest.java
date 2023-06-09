@@ -1,17 +1,18 @@
 package com.platzi.javatests.util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class StringUtilTest {
-    public static void main(String[] args) {
+    @Test
+    public void testRepeat() {
 
-        String result = StringUtil.repeat("Hola", 3);
-        if (!result.equals("HolaHolaHola")){
-            System.out.println("Error");
-        }
-
-        String result2 = StringUtil.repeat("Hola", 1);
-        if (!result2.equals("Hola")){
-            System.out.println("Error");
-        }
+        Assert.assertEquals("HolaHolaHola",StringUtil.repeat("Hola", 3));
+        Assert.assertEquals("Hola",StringUtil.repeat("Hola", 1));
 
     }
+
+
+
+
 }
